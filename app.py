@@ -28,7 +28,7 @@ def load_model():
     try:
         print("Loading question-answering model...")
         # Load the model with your Hugging Face token
-        huggingface_token = os.getenv("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")  # Set this in your environment
+        huggingface_token = os.getenv("Token")  # Set this in your environment
         qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2", use_auth_token=huggingface_token)
         print("Model loaded successfully!")
         return qa_pipeline
